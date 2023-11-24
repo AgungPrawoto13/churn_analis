@@ -1,0 +1,11 @@
+antecedents,consequents,support,confidence,lift
+"frozenset({'Video Product', 'Education Product'})",frozenset({'Use MyApp'}),0.17804912679256,0.8002552648372687,2.0630299525069122
+"frozenset({'Use MyApp', 'Education Product'})",frozenset({'Video Product'}),0.17804912679256,0.7862068965517242,2.0455320178846668
+frozenset({'Video Product'}),frozenset({'Use MyApp'}),0.2754508022149652,0.7166605097894347,1.8475256114374043
+frozenset({'Use MyApp'}),frozenset({'Video Product'}),0.2754508022149652,0.7101024890190336,1.8475256114374043
+frozenset({'Education Product'}),frozenset({'Use MyApp'}),0.22646599460457192,0.6585466556564823,1.6977101375507337
+frozenset({'Education Product'}),frozenset({'Video Product'}),0.2224904160159023,0.6469859620148637,1.6833107242226393
+"frozenset({'Video Product', 'Use MyApp'})",frozenset({'Education Product'}),0.17804912679256,0.6463917525773196,1.8796602450049802
+frozenset({'Call Center'}),frozenset({'Use MyApp'}),0.17435751810308106,0.6007827788649706,1.5487968929524114
+frozenset({'Call Center'}),frozenset({'Video Product'}),0.17293766860712764,0.595890410958904,1.55037168983508
+frozenset({'Call Center'}),frozenset({'Education Product'}),0.17165980406076956,0.5914872798434442,1.7200020280501145

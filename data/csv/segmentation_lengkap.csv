@@ -1,0 +1,63 @@
+"Model","Churn Label","Segment","Characteristics","Marketing"
+"Value","Yes","The Moderate Churners","- Rata-rata tenur bulanan: 12.46 bulan.
+- Rata-rata pengeluaran bulanan: 99.66 ribu IDR.
+- Rata-rata CLTV (diprediksi): 3824.19 ribu IDR.
+- Klaster ini mewakili pelanggan dengan tenur relatif pendek, pengeluaran bulanan yang moderat, dan CLTV yang lebih rendah.","- Fokus pada retensi pelanggan dengan menawarkan diskon atau keuntungan tambahan untuk perpanjangan langganan.
+- Program Loyalti: Tawarkan program loyalitas untuk memberikan insentif kepada pelanggan agar tetap setia.
+- Upgrade Paket: Sajikan opsi upgrade paket dengan manfaat tambahan untuk meningkatkan kepuasan pelanggan."
+"Value","Yes","The Early Churners","- Rata-rata tenur bulanan: 6.77 bulan.
+- Rata-rata pengeluaran bulanan: 79.96 ribu IDR.
+- Rata-rata CLTV (diprediksi): 6368.27 ribu IDR.
+- Klaster ini mencakup pelanggan dengan tenur bulanan dan pengeluaran bulanan yang moderat, tetapi memiliki potensi nilai pelanggan yang lebih besar.","- Penawaran Eksklusif untuk Memperpanjang: Tawarkan paket eksklusif dan diskon khusus bagi pelanggan untuk memperpanjang langganan mereka.
+- Program Early Retention: Buat program retensi khusus untuk mendorong pelanggan agar tidak beralih lebih awal, misalnya dengan keanggotaan premium.
+- Personalisasi Berbasis CLTV: Gunakan data CLTV untuk menyusun penawaran personalisasi yang lebih sesuai dengan nilai pelanggan jangka panjang."
+"Value ","Yes","The High-Value Churners","- Rata-rata tenur bulanan: 47.13 bulan.
+- Rata-rata pengeluaran bulanan: 120.63 ribu IDR.
+- Rata-rata CLTV (diprediksi): 6505.79 ribu IDR.
+- Klaster ini terdiri dari pelanggan dengan tenur yang sangat panjang, pengeluaran bulanan tinggi, dan CLTV yang besar.","- Layanan Khusus untuk Pelanggan Setia: Sediakan layanan eksklusif dan keistimewaan untuk pelanggan dengan CLTV tinggi.
+- Program Loyalitas Premium: Luncurkan program loyalitas premium dengan hadiah dan pengalaman eksklusif.
+- Pembaruan Paket Berkala: Tawarkan pembaruan paket secara berkala untuk memastikan pelanggan tetap mendapatkan nilai terbaik dan tetap setia."
+"Value","No","The Loyal Premium Customers","- Pelanggan dalam klaster ini memiliki tenur rata-rata sekitar 57,58 bulan.
+- Mereka memiliki jumlah pembelian bulanan yang relatif tinggi, kira-kira 115,74 ribu IDR.
+- CLTV yang diprediksi untuk kelompok ini cukup tinggi.","- Fokus pada menjaga dan meningkatkan pengalaman premium untuk pelanggan setia ini.
+- Peningkatan Premium: Tawarkan fitur premium, konten eksklusif, dan layanan kelas atas untuk menjaga kesetiaan mereka.
+- Hadiah Loyalti: Terapkan program loyalitas dengan hadiah dan hak istimewa khusus untuk pelanggan yang sudah lama setia.
+- Keterlibatan Personal: Libatkan dengan konten dan penawaran yang dipersonalisasi untuk memperkuat kesetiaan mereka."
+"Value","No","The Moderate Loyalty Segment","- Pelanggan dalam klaster ini memiliki tenur rata-rata sekitar 33,68 bulan.
+- Jumlah pembelian bulanan mereka sedang, rata-rata sekitar 43,04 ribu IDR.
+- CLTV yang diprediksi untuk kelompok ini relatif tinggi.","- Tingkatkan loyalitas pelanggan dengan menawarkan paket dan promosi yang disesuaikan.
+- Penawaran Disesuaikan: Berikan paket dan promosi yang disesuaikan berdasarkan preferensi dan riwayat mereka.
+- Umpan Balik Pelanggan: Selalu cari umpan balik mereka untuk meningkatkan layanan dan penawaran.
+- Program Loyalitas: Dorong partisipasi dalam program loyalitas dan berikan hadiah untuk kesetiaan mereka yang terus berlanjut."
+"Value","No","The Value-Seeking Customers","- Pelanggan dalam klaster ini memiliki tenur rata-rata sekitar 19 bulan.
+- Jumlah pembelian bulanan mereka relatif lebih rendah, rata-rata sekitar 73,21 ribu IDR.
+- CLTV yang diprediksi untuk kelompok ini lebih rendah dibandingkan dengan segmen lainnya.","- Fokus pada penawaran layanan yang hemat biaya dan bernilai.
+- Paket Hemat Biaya: Promosikan paket layanan yang terjangkau dan tunjukkan keefektifan biayanya.
+- Edukasi Penghematan: Edukasi pelanggan tentang cara mendapatkan lebih banyak nilai dari pengeluaran mereka.
+- Penghematan Biaya: Soroti penghematan potensial yang dapat mereka capai dengan berlangganan paket-paket tertentu."
+"Needs","Yes","Multifaceted Entertainment Enthusiasts","Peminat Utama: Video Product (30.75%)
+Kombinasi Frequent: Games Product & Music Product (8.51%)","- Tawarkan bundel penawaran eksklusif untuk Games Product dan Music Product.
+- Kampanye khusus untuk meningkatkan keterlibatan dengan Video Product.
+- Diskon dan insentif untuk penggunaan bersama Games Product dan Music Product."
+"Needs","Yes","Educational Video Learners","Minat Utama: Video Product (83.75%), Education Product (85.30%)
+Kombinasi Frequent: Video Product & Education Product (69.05%)","- Fokus pada integrasi layanan edukatif dengan Video Product.
+- Program loyalitas dan penawaran khusus untuk pelanggan yang menggunakan Video Product dan Education Product.
+- Kampanye personalisasi untuk meningkatkan keterlibatan dengan Games Product dan Music Product."
+"Needs","Yes","Non-online users","Tidak menggunakan semua produk karena tidak terkoneksi internet","- Jelajahi Layanan Lainnya: Perkenalkan layanan yang tidak bergantung pada internet atau konten offline.
+- Paket Terjangkau: Tawarkan paket dasar yang terjangkau yang sesuai dengan penggunaan minimal mereka.
+- Edukasi tentang Layanan: Edukasikan pengguna tentang layanan yang tersedia dan manfaat yang mereka dapatkan."
+"Needs","No","The Video Enthusiasts","Peminat Utama: Video Product (22.45%)
+Kombinasi Frequent: Games Product & Video Product (7.53%)","- Fokus pada penawaran dan promosi Video Product.
+- Bundel penawaran khusus untuk Games Product & Video Product.
+- Kampanye eksklusif untuk penggemar video."
+"Needs","No","The Multimedia Gamers and Music Lovers","Peminat Utama: Games Product (100%), Music Product (73.67%)
+Kombinasi Frequent: Games Product & Music Product (73.67%)","- Hadirkan bundel eksklusif untuk penggemar Games Product dan Music Product.
+- Tawarkan paket berlangganan khusus untuk Games dan Music.
+- Kampanye personalisasi untuk meningkatkan keterlibatan dengan Games Product."
+"Needs","No","The Video and Music Aficionados","Peminat Utama: Music Product (72.85%), Video Product (85.32%)
+Kombinasi Frequent: Music Product & Video Product (58.17%)","- Fokus pada penawaran eksklusif untuk Music Product dan Video Product.
+- Bundel layanan Music dan Video untuk meningkatkan nilai pelanggan.
+- Program loyalitas khusus untuk penggemar musik dan video."
+"Needs","No","Non-online users","Tidak menggunakan semua produk karena tidak terkoneksi internet","- Jelajahi Layanan Lainnya: Perkenalkan layanan yang tidak bergantung pada internet atau konten offline.
+- Paket Terjangkau: Tawarkan paket dasar yang terjangkau yang sesuai dengan penggunaan minimal mereka.
+- Edukasi tentang Layanan: Edukasikan pengguna tentang layanan yang tersedia dan manfaat yang mereka dapatkan."

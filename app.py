@@ -53,8 +53,14 @@ conn = psycopg2.connect(
 df_query = "SELECT * FROM telco_customer_churn_adapted_v2"  # Replace with your actual query
 segment_df_query = "SELECT * FROM segmentation_lengkap"  # Replace with your actual query
 
+N = 15
+page_number = 0
 df = pd.read_sql(df_query, conn)
 segment_df = pd.read_sql(segment_df_query, conn)
+last_page = len(df)
+
+#add button next and prev
+#prev, _ ,next = st.columns([1, 10, 1])
 # df = pd.read_excel("./data/Telco_customer_churn_adapted_v2.xlsx")
 # segment_df = pd.read_excel("data/segmentation_lengkap.xlsx")
 
@@ -541,56 +547,76 @@ with tab2:
             monthly = st.number_input('Monthly Purchase')
 
         # Menambahkan tombol "Predict!"
-    if st.button("Predict!"):
-        # Membuat DataFrame dari input
-        data_input = {
-            'Customer ID': [customer_id],
-            'Tenure Months': [tenure],
-            'Location': [lokasi],
-            'Device Class': [device],
-            'Games Product': [games],
-            'Music Product': [music],
-            'Education Product': [education],
-            'Call Center': [call],
-            'Video Product': [video],
-            'Use MyApp': [app],
-            'Payment Method': [payment],
-            'Monthly Purchase (Thou. IDR)': [monthly]
-        }
+        if st.button("Predict!"):
+            # Membuat DataFrame dari input
+            data_input = {
+                'Customer ID': [customer_id],
+                'Tenure Months': [tenure],
+                'Location': [lokasi],
+                'Device Class': [device],
+                'Games Product': [games],
+                'Music Product': [music],
+                'Education Product': [education],
+                'Call Center': [call],
+                'Video Product': [video],
+                'Use MyApp': [app],
+                'Payment Method': [payment],
+                'Monthly Purchase (Thou. IDR)': [monthly]
+            }
 
-        # Menerapkan preprocessing
-        table = pd.DataFrame(data_input)
-        table = preprocessing(table)
+            # Menerapkan preprocessing
+            table = pd.DataFrame(data_input)
+            table = preprocessing(table)
 
-        # Memuat model
-        model = joblib.load('model.joblib')
+            # Memuat model
+            model = joblib.load('model.joblib')
 
-        # Melakukan prediksi
-        result = model.predict(table)
+            # Melakukan prediksi
+            result = model.predict(table)
 
-        jawaban = None
-        if result == 0:
-            st.error(f"""
-                Hasil prediksi : Customer {customer_id} diprediksi akan **Churn**
-            """)
-        else:
-            st.success(f"""
-                Hasil prediksi : Customer {customer_id} diprediksi **tidak akan Churn**
-            """)
-        
-        st.write(" ")
-        st.write("#### Silahkan upload file.excel jika ingin melakukan prediksi secara kolektif")
-        file_upload = st.file_uploader("Pilih file.excel", type=["xlsx"])
+            jawaban = None
+            if result == 0:
+                st.error(f"""
+                    Hasil prediksi : Customer {customer_id} diprediksi akan **Churn**
+                """)
+            else:
+                st.success(f"""
+                    Hasil prediksi : Customer {customer_id} diprediksi **tidak akan Churn**
+                """)
+            
+            st.write(" ")
+            st.write("#### Silahkan upload file.excel jika ingin melakukan prediksi secara kolektif")
+            file_upload = st.file_uploader("Pilih file.excel", type=["xlsx"])
 
-        if(file_upload != None):
-            awal = pd.read_excel(file_upload)
-            file_df = preprocessing(awal)
-            y_pred = model.predict(file_df)
-            awal = pd.read_excel(file_upload)
-            awal['Churn Label predicted'] = y_pred
-            awal['Churn Label predicted'] = awal['Churn Label predicted'].map({1:"Churn", 0:"Not Churn"})
+            if(file_upload != None):
+                awal = pd.read_excel(file_upload)
+                file_df = preprocessing(awal)
+                y_pred = model.predict(file_df)
+                awal = pd.read_excel(file_upload)
+                awal['Churn Label predicted'] = y_pred
+                awal['Churn Label predicted'] = awal['Churn Label predicted'].map({1:"Churn", 0:"Not Churn"})
 
-            st.write(awal)
+                st.write(awal)
 
 with tabUp:
-    st.header("Update Data")
+    st.header("Update Data Customer")
+
+    if st.button("Next"):
+        if page_number + 1 > last_page:
+            page_number = 0
+        else:
+            page_number += 1
+    
+    if st.button("Previous"):
+        if page_number  -1 < 0:
+            page_number = last_page
+        else:
+            page_number -= 1
+    
+    #get start and end indices of the next page of the dataframe
+    start_idx = page_number * N
+    end_idx = (1 + page_number) * N
+
+    #Index into the sub dataframe
+    sub_df = df.iloc[start_idx:end_idx]
+    st.write(sub_df)
